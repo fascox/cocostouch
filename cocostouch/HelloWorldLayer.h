@@ -10,6 +10,11 @@
 // When you import this file, you import all the cocos2d classes
 #import "cocos2d.h"
 
+
+#define MAX_MISSED 3
+#define WIN_HIT 5
+
+
 // HelloWorldLayer
 @interface HelloWorldLayer : CCLayerColor
 {
@@ -20,7 +25,7 @@
     CCSprite *_nextProjectile;
     
     int _projectilesDestroyed;
-
+    int _targetMissed;
     
 }
 

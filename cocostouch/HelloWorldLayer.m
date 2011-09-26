@@ -99,11 +99,16 @@
     [self removeChild:sprite cleanup:YES];
     
     if (sprite.tag == 1) { // target
+        
         [_targets removeObject:sprite];
         
-        GameOverScene *gameOverScene = [GameOverScene node];
-        [gameOverScene.layer.label setString:@"You Lose :["];
-        [[CCDirector sharedDirector] replaceScene:gameOverScene];
+        if ( ++_targetMissed == MAX_MISSED) {
+            
+            _targetMissed = 0;
+            GameOverScene *gameOverScene = [GameOverScene node];
+            [gameOverScene.layer.label setString:@"You Lose :["];
+            [[CCDirector sharedDirector] replaceScene:gameOverScene];
+        }
         
     } else if (sprite.tag == 2) { // projectile
         [_projectiles removeObject:sprite];
@@ -229,10 +234,11 @@
             
             id disappear = [CCFadeTo actionWithDuration:.5 opacity:0];
             id actionMoveDone = [CCCallFuncN actionWithTarget:self selector:@selector(targetHit:)];
-            [target runAction:[CCSequence actions:disappear, actionMoveDone, nil]];
+            id rotate = [CCRotateBy actionWithDuration:0.5 angle:720];
+            [target runAction:[CCSequence actions:rotate, disappear, actionMoveDone, nil]];
             
             _projectilesDestroyed++;
-            if (_projectilesDestroyed > 3) {
+            if (_projectilesDestroyed > WIN_HIT) {
                 GameOverScene *gameOverScene = [GameOverScene node];
                 _projectilesDestroyed = 0;
                 [gameOverScene.layer.label setString:@"You Win!"];
