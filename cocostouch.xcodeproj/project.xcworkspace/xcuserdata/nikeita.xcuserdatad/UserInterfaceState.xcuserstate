@@ -665,8 +665,8 @@
 		<string>PrimaryDocumentSelectedCharacterRange</string>
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>PrimaryDocumentTimestamp</string>
-		<string>{28042, 700}</string>
-		<real>338762659.36455703</real>
+		<string>{13411, 756}</string>
+		<real>338762685.49506301</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -1521,7 +1521,7 @@
 			</dict>
 		</dict>
 		<string>file://localhost/Users/nikeita/github/cocostouch/cocostouch.xcodeproj/</string>
-		<real>338762659.36433798</real>
+		<real>338762685.49488598</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -7717,7 +7717,7 @@
 				<integer>591</integer>
 			</dict>
 		</dict>
-		<real>338762659.36669499</real>
+		<real>338762685.49722803</real>
 		<dict>
 			<key>$class</key>
 			<dict>
