@@ -396,17 +396,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		803CDE0A143114CC00BC4A48 /* artworks */ = {
-			isa = PBXGroup;
-			children = (
-				803CDE081431081B00BC4A48 /* background.png */,
-				80EBD1681430944F00177A6B /* Projectile.png */,
-				80EBD1691430944F00177A6B /* Target.png */,
-				80EBD16A1430944F00177A6B /* Player.png */,
-			);
-			name = artworks;
-			sourceTree = "<group>";
-		};
 		80EBCFE81430936300177A6B = {
 			isa = PBXGroup;
 			children = (
@@ -461,11 +450,14 @@
 		80EBD0081430936300177A6B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				803CDE0A143114CC00BC4A48 /* artworks */,
+				803CDE081431081B00BC4A48 /* background.png */,
 				80EBD16E1430982800177A6B /* background-music-aac.caf */,
 				80EBD16F1430982800177A6B /* pew-pew-lei.caf */,
 				80EBD0091430936300177A6B /* Default.png */,
 				80EBD00B1430936300177A6B /* fps_images.png */,
+				80EBD1681430944F00177A6B /* Projectile.png */,
+				80EBD1691430944F00177A6B /* Target.png */,
+				80EBD16A1430944F00177A6B /* Player.png */,
 				80EBD00D1430936300177A6B /* Icon-72.png */,
 				80EBD00F1430936300177A6B /* Icon-Small-50.png */,
 				80EBD0111430936300177A6B /* Icon-Small.png */,
@@ -814,9 +806,6 @@
 /* Begin PBXProject section */
 		80EBCFEA1430936300177A6B /* Project object */ = {
 			isa = PBXProject;
-			attributes = {
-				ORGANIZATIONNAME = altotouch;
-			};
 			buildConfigurationList = 80EBCFED1430936300177A6B /* Build configuration list for PBXProject "cocostouch" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
