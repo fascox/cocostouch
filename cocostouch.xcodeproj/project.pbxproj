@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		803CDE091431081B00BC4A48 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 803CDE081431081B00BC4A48 /* background.png */; };
 		80EBCFF81430936300177A6B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80EBCFF71430936300177A6B /* QuartzCore.framework */; };
 		80EBCFFA1430936300177A6B /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80EBCFF91430936300177A6B /* OpenGLES.framework */; };
 		80EBCFFC1430936300177A6B /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80EBCFFB1430936300177A6B /* OpenAL.framework */; };
@@ -131,6 +132,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		803CDE081431081B00BC4A48 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		80EBCFF31430936300177A6B /* cocostouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cocostouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80EBCFF71430936300177A6B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		80EBCFF91430936300177A6B /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -448,6 +450,7 @@
 		80EBD0081430936300177A6B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				803CDE081431081B00BC4A48 /* background.png */,
 				80EBD16E1430982800177A6B /* background-music-aac.caf */,
 				80EBD16F1430982800177A6B /* pew-pew-lei.caf */,
 				80EBD0091430936300177A6B /* Default.png */,
@@ -839,6 +842,7 @@
 				80EBD16D1430944F00177A6B /* Player.png in Resources */,
 				80EBD1701430982800177A6B /* background-music-aac.caf in Resources */,
 				80EBD1711430982800177A6B /* pew-pew-lei.caf in Resources */,
+				803CDE091431081B00BC4A48 /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1041,6 +1045,7 @@
 				80EBD1671430936900177A6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

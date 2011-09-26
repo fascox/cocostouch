@@ -9,7 +9,7 @@
 
 // Import the interfaces
 #import "HelloWorldLayer.h"
-#import "SimpleAudioEngine.h"ù
+#import "SimpleAudioEngine.h"
 #import "GameOverScene.h"
 
 
@@ -23,6 +23,10 @@
 	
 	// 'layer' is an autorelease object.
 	HelloWorldLayer *layer = [HelloWorldLayer node];
+    
+    CCSprite *bkg = [CCSprite spriteWithFile:@"background.png"];
+    bkg.anchorPoint = ccp(0, 0);
+    [layer addChild:bkg z:-1];
 	
 	// add layer as a child to scene
 	[scene addChild: layer];
@@ -36,7 +40,7 @@
 {
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super" return value
-	if( (self=[super initWithColor:ccc4(255,255,255,255)])) {
+	if( (self=[super init])) {
         
         _targets = [[NSMutableArray alloc] init];
         _projectiles = [[NSMutableArray alloc] init];
@@ -60,8 +64,7 @@
 
 -(void)addTarget {
     
-    CCSprite *target = [CCSprite spriteWithFile:@"Target.png" 
-                                           rect:CGRectMake(0, 0, 27, 40)]; 
+    CCSprite *target = [CCSprite spriteWithFile:@"Target.png"]; 
     
     // Determine where to spawn the target along the Y axis
     CGSize winSize = [[CCDirector sharedDirector] winSize];
@@ -106,7 +109,7 @@
             
             _targetMissed = 0;
             GameOverScene *gameOverScene = [GameOverScene node];
-            [gameOverScene.layer.label setString:@"You Lose :["];
+            [gameOverScene.layer.label setString:@"Mi dispiace hai perso :["];
             [[CCDirector sharedDirector] replaceScene:gameOverScene];
         }
         
@@ -234,14 +237,14 @@
             
             id disappear = [CCFadeTo actionWithDuration:.5 opacity:0];
             id actionMoveDone = [CCCallFuncN actionWithTarget:self selector:@selector(targetHit:)];
-            id rotate = [CCRotateBy actionWithDuration:0.5 angle:720];
+            id rotate = [CCRotateBy actionWithDuration:0.9 angle:720];
             [target runAction:[CCSequence actions:rotate, disappear, actionMoveDone, nil]];
             
             _projectilesDestroyed++;
             if (_projectilesDestroyed > WIN_HIT) {
                 GameOverScene *gameOverScene = [GameOverScene node];
                 _projectilesDestroyed = 0;
-                [gameOverScene.layer.label setString:@"You Win!"];
+                [gameOverScene.layer.label setString:@"Bravo hai vinto !!"];
                 [[CCDirector sharedDirector] replaceScene:gameOverScene];
             }
             

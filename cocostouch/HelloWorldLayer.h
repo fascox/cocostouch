@@ -11,12 +11,12 @@
 #import "cocos2d.h"
 
 
-#define MAX_MISSED 3
-#define WIN_HIT 5
+#define MAX_MISSED 5
+#define WIN_HIT 15
 
 
 // HelloWorldLayer
-@interface HelloWorldLayer : CCLayerColor
+@interface HelloWorldLayer : CCLayer
 {
     NSMutableArray *_targets;
     NSMutableArray *_projectiles;
